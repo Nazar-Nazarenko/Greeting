@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>greeting-quest</title>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="title">
+                Квест-привітання
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <div class="description">
+                    Катруся, в свій День Ангела ти отримала можливість отримати невеличкі сюрпризи, слідуючи
+                    по кожному наступному пункту, виконуючи певні завдання.
+                </div>
+                <div class="ready">Якщо ти готова розпочати - тисни на кнопку і вперед на зустріч подарункам!</div>
+                <div class="for-button">
+                    <button onclick="firstStep()">вперед</button>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-next">
+            <div class="container">
+                <div class="question">
+                    Що відмикає один із цих "золотих ключів"?
+                </div>
+                <div class="for-image">
+                    <img src="./images/photo-1.jpg" alt="photo" id="photo">
+                </div>
+                <div class="hint">
+                    Коли відчиниш потрібні двері цими ключами, там віднайдеш код, який треба ввести нижче
+                </div>
+                <label class="input">
+                    <input type="text" placeholder="answer here..." class="value">
+                </label>
+                <div class="error">Так діла не буде...</div>
+                <div class="quest-button">
+                    <button onclick="handleButtonClick()">next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
+<script src="main.js"></script>
+</body>
+</html>
