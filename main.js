@@ -53,6 +53,8 @@ function showNextQuestion() {
         thirdQuestion();
     }else if(currentStepIndex === 2) {
         showFourthQuestion();
+    }else if(currentStepIndex === 3) {
+        showFifthQuestion();
     }
 
 }
@@ -72,7 +74,7 @@ function showSecondQuestion() {
 }
 
 function thirdQuestion() {
-    if (value.value === 'You') {
+    if (value.value === 'Strongly') {
         hideError();
         question.style.display = 'none';
         photo.src = './images/kinder_main.jpg';
@@ -87,7 +89,7 @@ function thirdQuestion() {
 
 }
 function showFourthQuestion() {
-    if(value.value === 'Katyshka') {
+    if(value.value === 'You') {
         hideError();
         question.style.display = 'none';
         photo.src = './images/car.jpg';
@@ -96,5 +98,18 @@ function showFourthQuestion() {
         currentStepIndex++;
     }else showWrongMessage();
             setTimeout(hideError, 2000);
+}
+function showFifthQuestion() {
+    if(value.value === 'Katushka') {
+        hideError();
+        question.style.display = 'none';
+        photo.src = './images/kitchen.jpg';
+        hint.innerHTML = 'Там...)';
+        clearInput();
+        currentStepIndex++;
+        value.style.display = 'none';
+        questionButton.style.display = 'none';
+    }else showWrongMessage();
+    setTimeout(hideError, 2000);
 }
 
